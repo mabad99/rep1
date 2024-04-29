@@ -1,0 +1,352 @@
+@prefix : <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix FlightsSurvey: <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#> .
+@base <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey/> .
+
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasAircraft
+FlightsSurvey:hasAircraft rdf:type owl:ObjectProperty ;
+                          rdfs:domain FlightsSurvey:Survey ;
+                          rdfs:range <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Aircraft> ;
+                          rdfs:comment "has Aircraft" ;
+                          rdfs:label "hasAircraft" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasAirline
+FlightsSurvey:hasAirline rdf:type owl:ObjectProperty ;
+                         rdfs:domain FlightsSurvey:Survey ;
+                         rdfs:range <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/untitled-ontology-2#Airline> ;
+                         rdfs:comment "has Airline" ;
+                         rdfs:label "hasAirline" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasCountry
+FlightsSurvey:hasCountry rdf:type owl:ObjectProperty ;
+                         rdfs:domain <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Passenger> ;
+                         rdfs:range FlightsSurvey:Country ;
+                         rdfs:comment "has Country" ;
+                         rdfs:label "hasCountry" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasDate
+FlightsSurvey:hasDate rdf:type owl:ObjectProperty ;
+                      rdfs:domain FlightsSurvey:Survey ;
+                      rdfs:range FlightsSurvey:Date ;
+                      rdfs:comment "has Date" ;
+                      rdfs:label "hasDate" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasDateFlown
+FlightsSurvey:hasDateFlown rdf:type owl:ObjectProperty ;
+                           rdfs:domain FlightsSurvey:Survey ;
+                           rdfs:range FlightsSurvey:Date ;
+                           rdfs:comment "has Date Flown" ;
+                           rdfs:label "hasDateFlown" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasDestination
+FlightsSurvey:hasDestination rdf:type owl:ObjectProperty ;
+                             rdfs:domain FlightsSurvey:Survey ;
+                             rdfs:range FlightsSurvey:City ;
+                             rdfs:comment "has Destination" ;
+                             rdfs:label "hasDestination" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasOrigin
+FlightsSurvey:hasOrigin rdf:type owl:ObjectProperty ;
+                        rdfs:domain FlightsSurvey:Survey ;
+                        rdfs:range FlightsSurvey:City ;
+                        rdfs:comment "has Origin" ;
+                        rdfs:label "hasOrigin" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasPassenger
+FlightsSurvey:hasPassenger rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty ;
+                           rdfs:domain FlightsSurvey:Survey ;
+                           rdfs:range <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Passenger> ;
+                           rdfs:comment "has Passenger" ;
+                           rdfs:label "hasPassenger" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasPublished
+FlightsSurvey:hasPublished rdf:type owl:ObjectProperty ;
+                           rdfs:domain FlightsSurvey:Survey ;
+                           rdfs:range <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Passenger> ;
+                           rdfs:comment "has Published" ;
+                           rdfs:label "hasPublished" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasSeatType
+FlightsSurvey:hasSeatType rdf:type owl:ObjectProperty ;
+                          rdfs:domain FlightsSurvey:Survey ;
+                          rdfs:range <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Seat_Type> ;
+                          rdfs:comment "has Seat Type" ;
+                          rdfs:label "hasSeatType" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasTypeOfTravel
+FlightsSurvey:hasTypeOfTravel rdf:type owl:ObjectProperty ;
+                              rdfs:domain FlightsSurvey:Survey ;
+                              rdfs:range <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Type_Of_Traveller> ;
+                              rdfs:comment "has Type of Travel" ;
+                              rdfs:label "hasTypeOfTraveller" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#hasOverallRating
+FlightsSurvey:hasOverallRating rdf:type owl:DatatypeProperty ;
+                               rdfs:domain FlightsSurvey:Survey ;
+                               rdfs:range [ rdf:type rdfs:Datatype ;
+                                            owl:onDatatype xsd:integer ;
+                                            owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                   ]
+                                                                   [ xsd:maxInclusive 10
+                                                                   ]
+                                                                 )
+                                          ] ;
+                               rdfs:comment "has Overall Rating" ;
+                               rdfs:label "hasOverallRating" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#isVerified
+FlightsSurvey:isVerified rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain FlightsSurvey:Survey ;
+                         rdfs:range [ rdf:type rdfs:Datatype ;
+                                      owl:onDatatype xsd:integer ;
+                                      owl:withRestrictions ( [ xsd:minInclusive 0
+                                                             ]
+                                                             [ xsd:maxInclusive 1
+                                                             ]
+                                                           )
+                                    ] ;
+                         rdfs:comment "[0-> Not verified ; 1->Verified]" ;
+                         rdfs:label "isVerified" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#City
+FlightsSurvey:City rdf:type owl:Class ;
+                   rdfs:comment "Cities with airports" ;
+                   rdfs:label "City" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#Country
+FlightsSurvey:Country rdf:type owl:Class ;
+                      rdfs:comment "The country of the passenger" ;
+                      rdfs:label "Country" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#Date
+FlightsSurvey:Date rdf:type owl:Class ;
+                   rdfs:comment "The date of the survey" ;
+                   rdfs:label "Date" ;
+                   rdfs:sameAs "http://dbpedia.org/page/Date" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#Detractor
+FlightsSurvey:Detractor rdf:type owl:Class ;
+                        rdfs:subClassOf FlightsSurvey:NPS ;
+                        rdfs:comment "Overall rating less than 7" ;
+                        rdfs:label "Detractor" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#NPS
+FlightsSurvey:NPS rdf:type owl:Class ;
+                  rdfs:comment "NPS extracted from  survey's Overall Rating." ;
+                  rdfs:label "NPS" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#Neutral
+FlightsSurvey:Neutral rdf:type owl:Class ;
+                      rdfs:subClassOf FlightsSurvey:NPS ;
+                      rdfs:comment "Overall rating between 7 and 9" ;
+                      rdfs:label "Neutral" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#Promoter
+FlightsSurvey:Promoter rdf:type owl:Class ;
+                       rdfs:subClassOf FlightsSurvey:NPS ;
+                       rdfs:comment "Overall rating greater or equal  than 7" ;
+                       rdfs:label "Promoter" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/FlightsSurvey#Survey
+FlightsSurvey:Survey rdf:type owl:Class ;
+                     rdfs:comment "Survey data" ;
+                     rdfs:label "Survey" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Aircraft
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Aircraft> rdf:type owl:Class ;
+                                                                                    rdfs:comment "The aircraft/s used in the trip" ;
+                                                                                    rdfs:label "Aircraft" ;
+                                                                                    rdfs:sameAs "https://dbpedia.org/page/Aircraft" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Comment_Title
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Comment_Title> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                         rdfs:comment "The title of the comment" ;
+                                                                                         rdfs:label "Comment Title" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Comment_desc
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Comment_desc> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                        rdfs:comment "The full comment" ;
+                                                                                        rdfs:label "Comment desc" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Destination
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Destination> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty FlightsSurvey:hasDestination ;
+                                                                                                             owl:allValuesFrom FlightsSurvey:City
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf FlightsSurvey:City ;
+                                                                                       rdfs:comment "The destination city of the trip" ;
+                                                                                       rdfs:label "Destination" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Cabin_Staff_Service
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Cabin_Staff_Service> rdf:type owl:Class ;
+                                                                                                          rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                                          rdfs:comment "Cabin Staff Service value" ;
+                                                                                                          rdfs:label "Cabin Staff Service" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Food_Beverages
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Food_Beverages> rdf:type owl:Class ;
+                                                                                                     rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                                     rdfs:comment "'Food and Beverages' value" ;
+                                                                                                     rdfs:label "Food and Beverages" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Ground_Service
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Ground_Service> rdf:type owl:Class ;
+                                                                                                     rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                                     rdfs:comment "'Ground Service' value" ;
+                                                                                                     rdfs:label "Ground Service" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Inflight_Entertainment
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Inflight_Entertainment> rdf:type owl:Class ;
+                                                                                                             rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                                             rdfs:comment "'Inflight Entertainment' value" ;
+                                                                                                             rdfs:label "Inflight Entertainment" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Seat_Comfort
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Seat_Comfort> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                                   rdfs:comment "'Seat Comfort' value" ;
+                                                                                                   rdfs:label "Seat Comfort" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Value_For_Money
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Value_For_Money> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                                      rdfs:comment "'Value for Money' value" ;
+                                                                                                      rdfs:label "Value for Money" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Wifi_Connectivity
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Wifi_Connectivity> rdf:type owl:Class ;
+                                                                                                        rdfs:subClassOf FlightsSurvey:Survey ;
+                                                                                                        rdfs:comment "'Wifi Connectivity' value" ;
+                                                                                                        rdfs:label "Wifi Connectivity" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Origin
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Origin> rdf:type owl:Class ;
+                                                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty FlightsSurvey:hasOrigin ;
+                                                                                                        owl:allValuesFrom FlightsSurvey:City
+                                                                                                      ] ;
+                                                                                  rdfs:subClassOf FlightsSurvey:City ;
+                                                                                  rdfs:comment "The origin city of the trip" ;
+                                                                                  rdfs:label "Origin" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Passenger
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Passenger> rdf:type owl:Class ;
+                                                                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty FlightsSurvey:hasCountry ;
+                                                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onClass FlightsSurvey:Country
+                                                                                                         ] ;
+                                                                                     rdfs:comment "The passenger's name" ;
+                                                                                     rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Seat_Type
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Seat_Type> rdf:type owl:Class ;
+                                                                                     rdfs:comment "The seat type used in the trip" ;
+                                                                                     rdfs:label "Seat Type" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Type_Of_Traveller
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Type_Of_Traveller> rdf:type owl:Class ;
+                                                                                             rdfs:comment "Passenger's type of travel" ;
+                                                                                             rdfs:label "Type Of Traveller" .
+
+
+###  http://www.semanticweb.org/miquel.abad/ontologies/2024/3/untitled-ontology-2#Airline
+<http://www.semanticweb.org/miquel.abad/ontologies/2024/3/untitled-ontology-2#Airline> rdf:type owl:Class ;
+                                                                                       rdfs:comment "The airline in the trip" ;
+                                                                                       rdfs:label "Airline" ;
+                                                                                       rdfs:sameAs "https://dbpedia.org/page/Airline" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( FlightsSurvey:Detractor
+                FlightsSurvey:Neutral
+                FlightsSurvey:Promoter
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Cabin_Staff_Service>
+                <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Food_Beverages>
+                <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Ground_Service>
+                <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Inflight_Entertainment>
+                <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Seat_Comfort>
+                <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Value_For_Money>
+                <http://www.semanticweb.org/miquel.abad/ontologies/2024/3/MAFirstOntology#Evaluation_Wifi_Connectivity>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
